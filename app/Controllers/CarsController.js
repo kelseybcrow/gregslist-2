@@ -50,7 +50,6 @@ export default class CarsController {
     ProxyState.on('cars', _drawCars)
 
     // NOTE Get all appropriate data
-    this.getCars();
   }
 
   // NOTE this allows to fetch manually if needed
@@ -63,6 +62,7 @@ export default class CarsController {
   }
 
   makeCarsActive() {
+    this.getCars();
     _drawCarsForms()
     _drawCars()
   }

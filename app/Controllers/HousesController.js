@@ -48,7 +48,6 @@ function _drawHousesForms() {
 export default class HousesController {
   constructor() {
     ProxyState.on('houses', _drawHouses)
-    this.getHouses()
   }
 
   getHouses() {
@@ -60,6 +59,7 @@ export default class HousesController {
   }
 
   makeHousesActive() {
+    this.getHouses()
     _drawHousesForms();
     _drawHouses();
   }
